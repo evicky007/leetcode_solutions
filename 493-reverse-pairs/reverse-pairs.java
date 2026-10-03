@@ -6,10 +6,9 @@ class Solution {
     {
         if(low>=high) return 0;
         int mid = (low+high)/2;
-        int count=0;
-        count+= mergeCount(nums,low,mid);
+        int count= mergeCount(nums,low,mid);
         count+= mergeCount(nums,mid+1,high);
-         count+=merge(nums,low,mid,high);
+        count+=merge(nums,low,mid,high);
         return count;
     }
     static int merge(int[] nums, int low, int mid,int high)
