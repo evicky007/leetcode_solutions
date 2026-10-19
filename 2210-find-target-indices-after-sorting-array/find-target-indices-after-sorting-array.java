@@ -6,7 +6,15 @@ class Solution {
         int n = nums.length;
         for (int i=0;i<n;i++)
         {
-            if(target==nums[i]) ls.add(i);
+            if(target==nums[i])
+            {
+                while(i<n && target==nums[i])
+                {
+                    ls.add(i);
+                    i++;
+                }
+                break;
+            } 
         }
         return ls;
     }
